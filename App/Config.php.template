@@ -14,25 +14,25 @@ class Config
      * Database host
      * @var string
      */
-    const DB_HOST = '192.168.1.124';
+    const DB_HOST = '';
 
     /**
      * Database name
      * @var string
      */
-    const DB_NAME = 'DB_TeamLeman';
+    const DB_NAME = '';
 
     /**
      * Database user
      * @var string
      */
-    const DB_USER = 'teamlemanserviceaccount';
+    const DB_USER = 'your-database-user';
 
     /**
      * Database password
      * @var string
      */
-    const DB_PASSWORD = 'r5aAlhZNJ2n1WDnMg9Ke';
+    const DB_PASSWORD = '';
 
     /**
      * Show or hide error messages on screen

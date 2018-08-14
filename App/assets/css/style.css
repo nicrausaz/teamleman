@@ -1,0 +1,46 @@
+body {
+  background-color: #e9e9e9;
+}
+.navbar {
+  background-color: black;
+  /* height: 70px; */
+}
+
+#logo {
+  border-radius: 50%;
+}
+
+.nav-masthead .nav-link {
+  font-weight: 700;
+  color: lightgrey;
+  border-bottom: .25rem solid transparent;
+  margin-left: 20px;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: lightgrey;
+}
+
+.nav-masthead .active {
+  color: red;
+  border-bottom-color: red;
+}
+
+@media (min-width: 48em) {
+  .navbar-brand {
+    float: top;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+.part {
+  height: 120vh;
+  padding: 20px;
+}
+
+.part:nth-child(even) {
+  background-color: white;
+}
