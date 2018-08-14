@@ -1,9 +1,50 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
 
-    <h1>Welcome</h1>
+{% embed "Shared/navbar.php" %}{% endembed %}
+<div class="sections">
+  <div class="part" id="presentation">
+    <div class="container">
+      <h2>Présentation</h2>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <div class="part">
+    <div class="container" id="players">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <div class="part">
+    <div class="container" id="sponsors">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <div class="part">
+    <div class="container" id="results">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <div class="part">
+    <div class="container" id="coming">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <div class="part">
+    <div class="container" id="media">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+</div>
+<img src="App/assets/imgs/logo1.jpg" class="img-fluid" alt="Responsive image">
+
+
 
 {% endblock %}
