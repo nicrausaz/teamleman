@@ -9,8 +9,8 @@ class Home extends \Core\Controller
 {
     public function indexAction()
     {
-        // $players = Player::getAll();
-        $players = ['yess'];
-        View::renderTemplate('Home/index.php', $players);
+        $players = Player::getAll();
+        print_r($players);
+        View::renderTemplate('Home/index.php');
     }
 }

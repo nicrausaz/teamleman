@@ -37,6 +37,7 @@
   position: relative;
   top: -100px;
   visibility: hidden;
+  /* put some @media for this */
 }
 
 .part {
