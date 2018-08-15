@@ -3,12 +3,14 @@
 namespace App\Controllers;
 
 use \Core\View;
+use \App\Models\Player;
 
 class Home extends \Core\Controller
 {
     public function indexAction()
     {
-        // $player = Models\Player->getAll();
-        View::renderTemplate('Home/index.html');
+        // $players = Player::getAll();
+        $players = ['yess'];
+        View::renderTemplate('Home/index.php', $players);
     }
 }
