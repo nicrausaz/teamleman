@@ -5,46 +5,52 @@
 {% block body %}
 
 {% embed "Shared/navbar.php" %}{% endembed %}
+
 <div class="sections">
-  <div class="part" id="presentation">
+  <div class="container" style="display: flex; justify-content: center;">
+    <img src="App/assets/imgs/logo1.jpg" class="img-fluid" alt="mainpic">
+  </div>
+  <div class="part">
+    <a class="anchor" id="about"></a>
     <div class="container">
       <h2>Présentation</h2>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
   </div>
   <div class="part">
-    <div class="container" id="players">
+    <a class="anchor" id="players"></a>
+    <div class="container">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead"><?php print_r($players) ?></p>
+    </div>
+  </div>
+  <div class="part">
+    <a class="anchor" id="sponsors"></a>
+    <div class="container">
       <h1 class="display-4">Fluid jumbotron</h1>
       <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
   </div>
   <div class="part">
-    <div class="container" id="sponsors">
+    <div class="container">
+      <a class="anchor" id="results"></a>
       <h1 class="display-4">Fluid jumbotron</h1>
       <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
   </div>
   <div class="part">
-    <div class="container" id="results">
+    <div class="container">
+      <a class="anchor" id="coming"></a>
       <h1 class="display-4">Fluid jumbotron</h1>
       <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
   </div>
-  <div class="part">
-    <div class="container" id="coming">
-      <h1 class="display-4">Fluid jumbotron</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-    </div>
-  </div>
-  <div class="part">
-    <div class="container" id="media">
+  <div class="part ">
+    <div class="container">
+      <a class="anchor" id="media"></a>
       <h1 class="display-4">Fluid jumbotron</h1>
       <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
   </div>
 </div>
-<img src="App/assets/imgs/logo1.jpg" class="img-fluid" alt="Responsive image">
-
-
 
 {% endblock %}
