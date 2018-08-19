@@ -3,8 +3,8 @@ class DBContext
 {
     private $DB_HOST = '192.168.1.124';
     private $DB_NAME = 'DB_TeamLeman';
-    private $DB_USER = 'teamlemanserviceaccount';
-    private $DB_PASSWORD = 'r5aAlhZNJ2n1WDnMg9Ke';
+    private $DB_USER = '';
+    private $DB_PASSWORD = '';
     public $pdo;
 
     public function connect () {
