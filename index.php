@@ -17,47 +17,30 @@
       <a class="anchor" id="players"></a>
       <div class="container">
         <h1 class="display-4">Joueurs</h1>
-        <p class="lead"><pre><?php print_r($players->getAll()); ?></pre></p>
+        <p class="lead">Découvrez notre équipe !</p>
         <div class="row">
-          <div class="col">
-          <div class="card">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-          </div>
-          <div class="col">
-          <div class="card">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-          </div>
-          <div class="col">
-            <div class="card">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
+        <?php foreach ($players->getAll() as $player) { ?>
+          <div class="col-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="" alt="player_pic">
+              <div class="card-body">
+                <h5 class="card-title"><?= $player['player_firstname'] . " " . $player['player_name'] ?></h5>
+                <p class="card-text">
+                  <? print_r($player) ?>
+                  <ul>
+                    <li>asdf</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+        </div>
+        <?php } ?>
           </div>
         </div>
-    </div>
-</div>
+      </div>
     <div class="part">
       <a class="anchor" id="sponsors"></a>
       <div class="container">
