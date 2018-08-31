@@ -1,5 +1,5 @@
 <?php
-  require "./DB/DBContext.php";
+  require_once "./DB/DBContext.php";
   class Players {
     public $db;
 

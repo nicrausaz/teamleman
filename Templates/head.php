@@ -16,10 +16,11 @@
   <link rel="icon" href="assets/imgs/favicon.png" />
   <title>Team Leman 3x3</title>
   <?php
-    require "./Controllers/Players.php";
-    require "./Controllers/Helpers.php";
+    require_once "./Controllers/Players.php";
+    require_once "./Controllers/Games.php";
+    require_once "./Controllers/Helpers.php";
     $players = new Players();
+    $games = new Games();
     $helpers = new Helpers();
   ?>
-
 </head>
