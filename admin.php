@@ -1,14 +1,30 @@
-<?php
-  require_once "./Controllers/Administrators.php";
-  $administrators = new Administrators();
-  if ($_POST) {
-    // print_r($administrators->checkLogin($_POST['username'], $_POST['password']));
-  }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <? include "./Templates/head.php"; ?>
 <body>
+  <?php
+    require_once "./Controllers/Administrators.php";
+    $administrators = new Administrators();
+    if ($_POST) {
+      if ($administrators->checkLogin($_POST['username'], $_POST['password'])) {
+        echo "<script>
+          UIkit.notification({
+            message: 'Connecté !',
+            status: 'primary',
+            timeout: 2000
+          });
+        </script>";
+      } else {
+        echo "<script>
+          UIkit.notification({
+            message: 'Connecté !',
+            status: 'primary',
+            timeout: 2000
+          });
+        </script>";
+      }
+    }
+  ?>
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-center">
       <ul class="uk-navbar-nav">

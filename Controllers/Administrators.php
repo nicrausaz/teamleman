@@ -9,12 +9,20 @@ class Administrators {
   }
 
   public function checkLogin ($username, $password) {
-    $hashedpwd = password_hash($password, PASSWORD_DEFAULT);
     $this->db->connect();
-    $req = $this->db->pdo->prepare('SELECT * FROM T_Administrators WHERE administrator_username = :username AND administrator_password = :password');
+    $req = $this->db->pdo->prepare('SELECT * FROM T_Administrators WHERE administrator_username = :username');
     $req->bindParam(':username', $username, PDO::PARAM_STR);
-    $req->bindParam(':password', $hashedpwd, PDO::PARAM_STR);
     $req->execute();
-    return $req->fetchAll(PDO::FETCH_ASSOC);
+    $user = $req->fetchAll(PDO::FETCH_ASSOC);
+
+    if (count($user) == 1) {
+      if (password_verify($password, $user[0]['administrator_password'])) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
   }
 }
