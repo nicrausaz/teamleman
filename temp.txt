@@ -1,0 +1,16 @@
+echo "<script>
+          UIkit.notification({
+            message: 'Connecté !',
+            status: 'primary',
+            timeout: 2000
+          });
+        </script>";
+      } else {
+        echo "<script>
+          UIkit.notification({
+            message: 'Connecté !',
+            status: 'primary',
+            timeout: 2000
+          });
+        </script>";
+      }
