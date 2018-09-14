@@ -15,6 +15,7 @@
   <link rel="icon" href="assets/imgs/favicon.png" />
   <title>Team Leman 3x3</title>
   <?php
+    session_start();
     require_once "./Controllers/Players.php";
     require_once "./Controllers/Games.php";
     require_once "./Controllers/Helpers.php";

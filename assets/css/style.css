@@ -23,6 +23,11 @@
   border-bottom-color: red;
 }
 
+#logoNavBar {
+  width: 10px;
+  height: 10px;
+}
+
 @media (min-width: 48em) {
   .navbar-brand {
     float: top;

@@ -1,17 +1,11 @@
 <?php
-  require_once "./Controllers/Administrators.php";
-  $administrators = new Administrators();
-  function showContent ($administrators) {
-    if ($_POST) {
-      if ($administrators->checkLogin($_POST['username'], $_POST['password'])) {
-        return true;
-      }
-    }
+include "./Templates/head.php";
+  if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<? include "./Templates/head.php"; ?>
 <body>
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-center">
@@ -21,12 +15,11 @@
     </div>
   </nav>
   <div class="uk-container uk-scope">
-    <?php
-    if (showContent($administrators)) {
-      include "./Templates/adminContent.php";
-    } else {
-      include "./Templates/loginForm.php";
-    } ?>
+    <ul uk-tab>
+      <li class="uk-active"><a href="#tournament">Tournois</a></li>
+      <li><a href="#games">Matchs</a></li>
+      <li><a href="#players">Joueurs</a></li>
+    </ul>
   </div>
 </body>
 </html>

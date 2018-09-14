@@ -11,7 +11,8 @@
             </ul>
           </div>
         </div>
-        <a class="uk-navbar-item uk-logo" href="#"><span uk-icon="icon: dribbble; ratio: 2"></span></a>
+        <a class="uk-navbar-item uk-logo" href="#">LOGO</a>
+        <!-- <img src="assets/imgs/icon.png" class="uk-logo" id="logoNavBar"/> -->
         <div class="uk-navbar-center-right">
           <div>
             <ul class="uk-navbar-nav">
