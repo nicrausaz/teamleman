@@ -1,7 +1,7 @@
 <div class="uk-section uk-dark" id="results" uk-scrollspy="cls:uk-animation-fade">
   <h1 class="uk-text-right">Résultats</h1>
   <ul uk-accordion="collapsible: false" class="uk-list-striped">
-    <?php foreach($games->getTournements() as $tournament) { ?>
+    <?php foreach($tournaments->getTournements() as $tournament) { ?>
     <li>
       <a class="uk-accordion-title">
         <?= $tournament['tournament_name'] . ", " . $helpers->formatDate($tournament['tournament_date'])?>
@@ -14,13 +14,13 @@
       </a>
       <div class="uk-accordion-content uk-padding">
         <?php
-          $tournamentGames = $games->getTournamentGames($tournament['tournament_id']);
+          $tournamentGames = $tournaments->getTournamentGames($tournament['tournament_id']);
           if (count($tournamentGames) > 0) {
         ?>
         <div>
           <div class="uk-child-width-1-2@m uk-child-width-1-2@s" uk-grid>
             <div class="uk-text-left"><span uk-icon="icon: users"></span> Joueurs:
-            <?php foreach($games->getTournamentPlayers($tournament['tournament_id']) as $player) { ?>
+            <?php foreach($tournaments->getTournamentPlayers($tournament['tournament_id']) as $player) { ?>
               <b><?= $player['player_firstname'] ?></b>
             <?php } ?>
             </div>

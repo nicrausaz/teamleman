@@ -17,10 +17,10 @@
   <?php
     session_start();
     require_once "./Controllers/Players.php";
-    require_once "./Controllers/Games.php";
+    require_once "./Controllers/Tournaments.php";
     require_once "./Controllers/Helpers.php";
     $players = new Players();
-    $games = new Games();
+    $tournaments = new Tournaments();
     $helpers = new Helpers();
   ?>
 </head>

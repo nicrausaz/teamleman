@@ -17,9 +17,11 @@ include "./Templates/head.php";
   <div class="uk-container uk-scope">
     <ul uk-tab>
       <li class="uk-active"><a href="#tournament">Tournois</a></li>
-      <li><a href="#games">Matchs</a></li>
       <li><a href="#players">Joueurs</a></li>
     </ul>
+    <div class="uk-container uk-container-small">
+      <?php include "./Templates/admin/tournaments.php"; ?>
+    </div>
   </div>
 </body>
 </html>
