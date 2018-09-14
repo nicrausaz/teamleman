@@ -10,7 +10,12 @@ include "./Templates/head.php";
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-center">
       <ul class="uk-navbar-nav">
-        <li class="uk-active"><a href="#">Administration</a></li>
+        <li class="uk-active"><a>Administration</a></li>
+      </ul>
+    </div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="./Templates/admin/logout.php">Déconnexion <span uk-icon="sign-out"></span></a></li>
       </ul>
     </div>
   </nav>
