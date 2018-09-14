@@ -52,4 +52,21 @@ class Tournaments {
     $req->bindParam(':link', $data['link'], PDO::PARAM_STR);
     $req->execute();
   }
+
+  public function addGameToTournament ($data) {
+    $this->db->connect();
+    $req = $this->db->pdo->prepare('INSERT INTO T_Games (game_team1_name, game_team2_name, game_time, game_team1_score, game_team2_score, fk_game_tournament)
+      VALUES (:team1, :team2, :gametime, :score1, :score2, :id);');
+    $req->bindParam(':team1', $data['new_team1'], PDO::PARAM_STR);
+    $req->bindParam(':team2', $data['new_team2'], PDO::PARAM_STR);
+    $req->bindParam(':gametime', $data['new_time'], PDO::PARAM_STR);
+    $req->bindParam(':score1', $data['new_score1'], PDO::PARAM_STR);
+    $req->bindParam(':score2', $data['new_score2'], PDO::PARAM_STR);
+    $req->bindParam(':id', $data['id'], PDO::PARAM_STR);
+    $req->execute();
+  }
+
+  public function editGameOfTournament ($data) {
+    // TODO
+  }
 }

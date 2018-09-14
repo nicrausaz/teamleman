@@ -6,10 +6,19 @@
 
     <div class="uk-container uk-scope">
       <div class="uk-section uk-dark" id="about">
-      <h1 class="uk-align-left">Présentation</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+      <h1 class="uk-text-left">Présentation</h1>
+        <p>
+          Le Team Leman a vu le jour en septembre 2017 à l’aube de son premier tournoi 3x3.
+          Depuis est né une passion pour cette discipline qui entrera au J.O de Tokyo 2020.
+        </p>
+        <p>
+          Ses joueurs viennent principalement du canton de Vaud et Valais. Avec plus de 4111 kilomètres au compteur pour notre première saison à écouler les tournois, 
+          notre but est de participer à un maximum de tournois chaque année.
+        </p>
+        <p>
+          Une partie de nos joueurs s’est classée dans le Top 20 et même Top 10 du ranking Fiba 3x3 Suisse,
+          ainsi même qu’une troisième place en U23.
+        </p>
       </div>
       <hr>
       <div class="uk-section uk-dark" id="players">
