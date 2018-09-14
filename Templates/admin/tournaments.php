@@ -7,10 +7,10 @@ if ($_POST) {
       $tournaments->addTournament($_POST);
     }
   }
-  else if ($_POST['new_time'] && $_POST['new_team1'] && $_POST['new_team2']) {
+  else if (isset($_POST['new_time']) && $_POST['new_team1'] && $_POST['new_team2']) {
     $tournaments->addGameToTournament($_POST);
   }
-  else if ($_POST['time'] && $_POST['team1'] && $_POST['team2']) {
+  else if (isset($_POST['time']) && $_POST['team1'] && $_POST['team2']) {
     $tournaments->editGameOfTournament($_POST);
   }
   else {

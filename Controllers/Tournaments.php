@@ -67,6 +67,16 @@ class Tournaments {
   }
 
   public function editGameOfTournament ($data) {
-    // TODO
+    $this->db->connect();
+    $req = $this->db->pdo->prepare('UPDATE T_Games SET game_team1_name=:team1,game_team2_name=:team2,game_team1_score=:score1,game_team2_score=:score2,game_time=:time,fk_game_tournament=:id
+    WHERE game_id=:game_id');
+    $req->bindParam(':team1', $data['team1'], PDO::PARAM_STR);
+    $req->bindParam(':team2', $data['team2'], PDO::PARAM_STR);
+    $req->bindParam(':time', $data['time'], PDO::PARAM_STR);
+    $req->bindParam(':score1', $data['score1'], PDO::PARAM_STR);
+    $req->bindParam(':score2', $data['score2'], PDO::PARAM_STR);
+    $req->bindParam(':game_id', $data['game_id'], PDO::PARAM_STR);
+    $req->bindParam(':id', $data['id'], PDO::PARAM_STR);
+    $req->execute();
   }
 }
