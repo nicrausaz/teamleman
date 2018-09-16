@@ -1,16 +1,16 @@
 <?php
 if ($_POST) {
-  if (isset($_POST['name']) && $_POST['location'] && $_POST['date']) {
+  if (isset($_POST['name']) && isset($_POST['location']) && isset($_POST['date'])) {
     if (isset($_POST['id'])) {
       $tournaments->editTournament($_POST);
     } else {
       $tournaments->addTournament($_POST);
     }
   }
-  else if (isset($_POST['new_time']) && $_POST['new_team1'] && $_POST['new_team2']) {
+  else if (isset($_POST['new_time']) && isset($_POST['new_team1']) && isset($_POST['new_team2'])) {
     $tournaments->addGameToTournament($_POST);
   }
-  else if (isset($_POST['time']) && $_POST['team1'] && $_POST['team2']) {
+  else if (isset($_POST['time']) && isset($_POST['team1']) && isset($_POST['team2'])) {
     $tournaments->editGameOfTournament($_POST);
   }
   else {

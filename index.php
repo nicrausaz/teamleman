@@ -5,7 +5,7 @@
   <? include "./Templates/navbar.php"; ?>
 
     <div class="uk-container uk-scope">
-      <div class="uk-section uk-dark" id="about">
+      <div class="uk-section uk-dark" id="about" uk-scrollspy="cls:uk-animation-fade">
       <h1 class="uk-text-left">Présentation</h1>
         <p>
           Le Team Leman a vu le jour en septembre 2017 à l’aube de son premier tournoi 3x3.
@@ -21,14 +21,19 @@
         </p>
       </div>
       <hr>
-      <div class="uk-section uk-dark" id="players">
+      <div class="uk-section uk-dark" id="players" uk-scrollspy="cls:uk-animation-fade">
         <h1 class="uk-text-right">Joueurs</h1>
         <div class="uk-child-width-1-4@m" uk-grid uk-scrollspy="cls: uk-animation-slide-left">
         <?php foreach ($players->getAll() as $player) { ?>
           <div>
             <div class="uk-card uk-card-default">
               <div class="uk-card-media-top">
-              <img src="assets/imgs/players/<?= $player['player_pic'] ?>"  alt="playerpic">
+              <?php
+              if ($player['player_pic'] != "") { ?>
+                <img src="assets/imgs/players/<?= $player['player_pic'] ?>" alt="playerpic">
+              <?php } else { ?>
+                <img src="assets/imgs/nopicture.jpg" alt="playerpic">
+              <?php } ?>
               </div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title"><?= $player['player_firstname'] . " " . $player['player_name'] ?></h3>

@@ -25,8 +25,8 @@ include "./Templates/head.php";
       <li><a href="#players" id="tabPlayers">Joueurs</a></li>
     </ul>
     <div class="uk-container uk-container-small">
-      <div id="tournaments"><?php include "./Templates/admin/tournaments.php"; ?></div>
-      <div id="players"><?php include "./Templates/admin/players.php"; ?></div>
+      <div id="tournamentsadmin"><?php include "./Templates/admin/tournaments.php"; ?></div>
+      <div id="playersadmin"><?php include "./Templates/admin/players.php"; ?></div>
     </div>
   </div>
 </body>

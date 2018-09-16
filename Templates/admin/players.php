@@ -1,9 +1,9 @@
 <?php
 if ($_POST) {
-  if (isset($_POST['fsname']) && $_POST['name'] && $_POST['birthdate'] && $_POST['size'] && $_POST['club']) {
-    // $players->editPlayer($_POST)
+  if (isset($_POST['fsname']) && isset($_POST['name']) && isset($_POST['birthdate']) && isset($_POST['size']) && isset($_POST['club'])) {
+    $players->editPlayer($_POST);
   }
-  else if (isset($_POST['new_fsname']) && $_POST['new_name'] && $_POST['new_birthdate'] && $_POST['new_size'] && $_POST['new_club']) {
+  else if (isset($_POST['new_fsname']) && isset($_POST['new_name']) && isset($_POST['new_birthdate']) && isset($_POST['new_size']) && isset($_POST['new_club'])) {
     $players->addPlayer($_POST);
   }
   else {
@@ -129,6 +129,7 @@ if ($_POST) {
           <input class="uk-input" id="form-horizontal-text" name="link" type="text" placeholder="Lien" value="<?php echo $player['player_fiba_profile'] ?>" >
         </div>
       </div>
+      <input type="text" name="id" value="<?php echo $player['player_id'] ?>" style="display:none;"/>
       <p uk-margin>
         <button type="submit" class="uk-button uk-button-primary uk-align-right">Modifier</button>
       </p>

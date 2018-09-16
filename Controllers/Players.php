@@ -29,6 +29,17 @@
     }
 
     public function editPlayer ($data) {
-
+      $this->db->connect();
+      $req = $this->db->pdo->prepare('UPDATE T_Players SET player_name=:firstname,player_firstname=:name,player_birthdate=:birthdate,player_size=:size,player_club=:club,player_email=:email,player_fiba_profile=:link
+      WHERE player_id=:id');
+      $req->bindParam(':firstname', $data['fsname'], PDO::PARAM_STR);
+      $req->bindParam(':name', $data['name'], PDO::PARAM_STR);
+      $req->bindParam(':birthdate', $data['birthdate'], PDO::PARAM_STR);
+      $req->bindParam(':size', $data['size'], PDO::PARAM_STR);
+      $req->bindParam(':club', $data['club'], PDO::PARAM_STR);
+      $req->bindParam(':email', $data['email'], PDO::PARAM_STR);
+      $req->bindParam(':link', $data['link'], PDO::PARAM_STR);
+      $req->bindParam(':id', $data['id'], PDO::PARAM_STR);
+      $req->execute();
     }
   }

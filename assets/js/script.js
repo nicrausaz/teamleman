@@ -1,17 +1,17 @@
 $(document).ready(function () {
   setAdminTabsClicks()
-  $('#players').hide()
+  $('#playersadmin').hide()
 })
 
 function setAdminTabsClicks() {
 
   $('#tabTournament').click(function () {
-    $('#players').hide()
-    $('#tournaments').show()
+    $('#playersadmin').hide()
+    $('#tournamentsadmin').show()
   })
 
   $('#tabPlayers').click(function () {
-    $('#tournaments').hide()
-    $('#players').show()
+    $('#tournamentsadmin').hide()
+    $('#playersadmin').show()
   })
 }
