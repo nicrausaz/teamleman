@@ -21,11 +21,12 @@ include "./Templates/head.php";
   </nav>
   <div class="uk-container uk-scope">
     <ul uk-tab>
-      <li class="uk-active"><a href="#tournament">Tournois</a></li>
-      <li><a href="#players">Joueurs</a></li>
+      <li class="uk-active"><a href="#tournament" id="tabTournament">Tournois</a></li>
+      <li><a href="#players" id="tabPlayers">Joueurs</a></li>
     </ul>
     <div class="uk-container uk-container-small">
-      <?php include "./Templates/admin/tournaments.php"; ?>
+      <div id="tournaments"><?php include "./Templates/admin/tournaments.php"; ?></div>
+      <div id="players"><?php include "./Templates/admin/players.php"; ?></div>
     </div>
   </div>
 </body>

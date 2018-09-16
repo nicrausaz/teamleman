@@ -18,7 +18,7 @@
         <h3>Connectez-vous</h3>
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <div class="uk-margin">
-              <input class="uk-input" type="text" placeholder="Nom de compte" name="username">
+              <input class="uk-input" type="text" placeholder="Nom de compte" name="username" autofocus>
             </div>
             <div class="uk-margin">
               <input class="uk-input" type="password" placeholder="Mot de passe" name="password">
