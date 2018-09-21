@@ -12,7 +12,7 @@
           Depuis est né une passion pour cette discipline qui entrera au J.O de Tokyo 2020.
         </p>
         <p>
-          Ses joueurs viennent principalement du canton de Vaud et Valais. Avec plus de 4111 kilomètres au compteur pour notre première saison à écouler les tournois, 
+          Ses joueurs viennent principalement du canton de Vaud et Valais. Avec plus de 4111 kilomètres au compteur pour notre première saison à écouler les tournois,
           notre but est de participer à un maximum de tournois chaque année.
         </p>
         <p>
@@ -23,7 +23,7 @@
       <hr>
       <div class="uk-section uk-dark" id="players" uk-scrollspy="cls:uk-animation-fade">
         <h1 class="uk-text-right">Joueurs</h1>
-        <div class="uk-child-width-1-4@m" uk-grid uk-scrollspy="cls: uk-animation-slide-left">
+        <div class="uk-child-width-1-5@m" uk-grid uk-scrollspy="cls: uk-animation-slide-left">
         <?php foreach ($players->getAll() as $player) { ?>
           <div>
             <div class="uk-card uk-card-default">
@@ -38,8 +38,8 @@
               <div class="uk-card-body">
                 <h3 class="uk-card-title"><?= $player['player_firstname'] . " " . $player['player_name'] ?></h3>
                 <ul class="uk-list">
-                  <li>Taille: <?= $player['player_size'] ?>cm</li>
-                  <li>Âge: <?= $helpers->getAgeFromDate($player['player_birthdate'])?></li>
+                  <li>Taille: <?= $player['player_size'] ?> cm</li>
+                  <li>Âge: <?= $helpers->getAgeFromDate($player['player_birthdate'])?> ans</li>
                   <li>Club (5x5): <?= $player['player_club'] ?></li>
                 </ul>
               </div>
@@ -48,28 +48,11 @@
           <?php } ?>
         </div>
       <hr>
-      <div class="uk-section uk-dark" id="sponsors" uk-scrollspy="cls:uk-animation-fade">
-      <h1 class="uk-align-left">Sponsors</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-        </div>
+        <? include "./Templates/sponsors.php"; ?>
       <hr>
         <? include "./Templates/results.php"; ?>
       <hr>
-      <div class="uk-section uk-dark" id="coming" uk-scrollspy="cls:uk-animation-fade">
-      <h1 class="uk-align-left">A venir</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-      </div>
-      <hr>
-      <div class="uk-section uk-dark" id="coming" uk-scrollspy="cls:uk-animation-fade">
-      <h1 class="uk-align-right">Boutique</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-      </div>
+        <? include "./Templates/shopitems.php"; ?>
       <hr>
       <div class="uk-section uk-dark" id="media" uk-scrollspy="cls:uk-animation-fade">
         <h1 class="uk-text-left">Médias</h1>

@@ -19,9 +19,11 @@
     session_start();
     require_once "./Controllers/Players.php";
     require_once "./Controllers/Tournaments.php";
+    require_once "./Controllers/ShopItems.php";
     require_once "./Controllers/Helpers.php";
     $players = new Players();
     $tournaments = new Tournaments();
+    $shopItems = new ShopItems();
     $helpers = new Helpers();
   ?>
 </head>
