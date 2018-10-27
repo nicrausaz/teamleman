@@ -17,9 +17,8 @@
           <div>
             <ul class="uk-navbar-nav">
               <li class="uk-active"><a href="#results">Résultats</a></li>
-              <li class="uk-active"><a href="#coming">A venir</a></li>
+              <li class="uk-active"><a href="#soon">A venir</a></li>
               <li class="uk-active"><a href="#media">Médias</a></li>
-              <!-- <li class="uk-active"><a href="#media">Admin</a><span uk-icon="icon: lock"></li> -->
             </ul>
           </div>
         </div>

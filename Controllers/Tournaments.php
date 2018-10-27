@@ -5,9 +5,16 @@ class Tournaments {
     $this->db = new DBContext();
   }
 
-  public function getTournements () {
+  public function getTournaments () {
     $this->db->connect();
     $req = $this->db->pdo->prepare('SELECT * FROM T_Tournament WHERE tournament_date < NOW() ORDER BY tournament_date DESC');
+    $req->execute();
+    return $req->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function getFutureTournaments () {
+    $this->db->connect();
+    $req = $this->db->pdo->prepare('SELECT * FROM T_Tournament WHERE tournament_date >= NOW() ORDER BY tournament_date DESC');
     $req->execute();
     return $req->fetchAll(PDO::FETCH_ASSOC);
   }

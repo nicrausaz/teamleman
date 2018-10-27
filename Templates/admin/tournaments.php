@@ -59,7 +59,7 @@ if ($_POST) {
       </form>
     </div>
   </li>
-  <?php foreach($tournaments->getTournements() as $tournament) { ?>
+  <?php foreach($tournaments->getTournaments() as $tournament) { ?>
     <li>
       <a class="uk-accordion-title" href="#"><?= $tournament['tournament_name'] ?></a>
     <div class="uk-accordion-content">

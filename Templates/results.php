@@ -1,7 +1,7 @@
 <div class="uk-section uk-dark" id="results" uk-scrollspy="cls:uk-animation-fade">
   <h1 class="uk-text-right">Résultats</h1>
   <ul uk-accordion="collapsible: false" class="uk-list-striped">
-    <?php foreach($tournaments->getTournements() as $tournament) { ?>
+    <?php foreach($tournaments->getTournaments() as $tournament) { ?>
     <li>
       <a class="uk-accordion-title">
         <?= $tournament['tournament_name'] . ", " . $helpers->formatDate($tournament['tournament_date'])?>
