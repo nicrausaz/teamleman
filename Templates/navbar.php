@@ -11,8 +11,7 @@
             </ul>
           </div>
         </div>
-        <a class="uk-navbar-item uk-logo" href="#">LOGO</a>
-        <!-- <img src="assets/imgs/icon.png" class="uk-logo" id="logoNavBar"/> -->
+        <a class="uk-navbar-item uk-logo" href="#"></a>
         <div class="uk-navbar-center-right">
           <div>
             <ul class="uk-navbar-nav">

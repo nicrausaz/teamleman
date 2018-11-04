@@ -53,3 +53,9 @@
 .part:nth-child(even) {
   background-color: #e9e9e9;
 }
+
+#logo-banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

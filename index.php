@@ -5,6 +5,7 @@
   <? include "./Templates/navbar.php"; ?>
 
     <div class="uk-container uk-scope">
+      <img src="./assets/imgs/logo1.jpg" id="logo-banner" draggable="false">
       <div class="uk-section uk-dark" id="about" uk-scrollspy="cls:uk-animation-fade">
       <h1 class="uk-text-left">Présentation</h1>
         <p>
@@ -28,9 +29,9 @@
         <? include "./Templates/results.php"; ?>
       <hr>
         <? include "./Templates/soon.php"; ?>
+      <!-- <hr> -->
+        <!-- <? include "./Templates/shopitems.php"; ?> -->
       <hr>
-        <!-- <? include "./Templates/shopitems.php"; ?>
-      <hr> -->
       <? include "./Templates/medias.php"; ?>
 </body>
 </html>
