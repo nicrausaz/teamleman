@@ -1,4 +1,4 @@
-<?
+<?php
 require_once "./DB/DBContext.php";
 class Tournaments {
   function __construct () {

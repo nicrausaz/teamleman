@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<? include "./Templates/head.php"; ?>
+<?php include "./Templates/head.php"; ?>
 <body>
-  <? include "./Templates/navbar.php"; ?>
+  <?php include "./Templates/navbar.php"; ?>
 
     <div class="uk-container uk-scope">
       <img src="./assets/imgs/logo1.jpg" id="logo-banner" draggable="false">
@@ -22,16 +22,16 @@
         </p>
       </div>
       <hr>
-        <? include "./Templates/players.php"; ?>
-      <hr>
-        <? include "./Templates/sponsors.php"; ?>
-      <hr>
-        <? include "./Templates/results.php"; ?>
-      <hr>
-        <? include "./Templates/soon.php"; ?>
+        <?php include "./Templates/players.php"; ?>
       <!-- <hr> -->
-        <!-- <? include "./Templates/shopitems.php"; ?> -->
+        <?php include "./Templates/sponsors.php"; ?>
       <hr>
-      <? include "./Templates/medias.php"; ?>
+        <?php include "./Templates/results.php"; ?>
+      <hr>
+        <?php include "./Templates/soon.php"; ?>
+      <!-- <hr> -->
+        <!-- <?php include "./Templates/shopitems.php"; ?> -->
+      <hr>
+      <?php include "./Templates/medias.php"; ?>
 </body>
 </html>

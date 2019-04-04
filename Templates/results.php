@@ -40,7 +40,7 @@
             <?php } ?>
           </ul>
         </div>
-        <? } else { ?>
+        <?php } else { ?>
           <p class="uk-text-center"><b>Les résultats de ce tournoi ne sont pas encore disponibles</b></p>
         <?php } ?>
       </div>
