@@ -3,9 +3,8 @@
 <?php include "./Templates/head.php"; ?>
 <body>
   <?php include "./Templates/navbar.php"; ?>
-
     <div class="uk-container uk-scope">
-      <img src="./assets/imgs/logo1.jpg" id="logo-banner" draggable="false">
+      <img src="./assets/imgs/logos/logo_banner.jpg" id="logo-banner" draggable="false">
       <div class="uk-section uk-dark" id="about" uk-scrollspy="cls:uk-animation-fade">
       <h1 class="uk-text-left">Présentation</h1>
         <p>
