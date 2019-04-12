@@ -50,7 +50,7 @@ if ($_POST) {
       <div class="uk-margin">
           <label class="uk-form-label" for="form-horizontal-text">Lien FIBA</label>
           <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" name="link" type="text" placeholder="Lieu">
+            <input class="uk-input" id="form-horizontal-text" name="link" type="text" placeholder="Lien">
           </div>
       </div>
       <p uk-margin>
@@ -99,6 +99,18 @@ if ($_POST) {
           <button type="submit" class="uk-button uk-button-primary uk-align-right">Modifier</button>
         </p>
       </form>
+      <hr class="uk-divider-icon">
+      <div>
+        <?php foreach ($players->getAll() as $key => $player) { ?>
+          <input class="uk-checkbox" type="checkbox" name="tournamentplayers[]" id="<?= $player['player_firstname'] . $player['player_name']; ?>">
+          <label for="<?= $player['player_firstname'] . $player['player_name']; ?>"><?= $player['player_firstname'] . " " . $player['player_name']; ?></label>
+          <br>
+        <?php } ?>
+      </div>
+      <!-- <?php echo "<pre>"; ?>
+      <?php $playerssss = $players->getAll(); print_r($playerssss); ?>
+      <?php echo "</pre>"; ?> -->
+
       <hr class="uk-divider-icon">
       <table class="uk-table">
         <caption></caption>
