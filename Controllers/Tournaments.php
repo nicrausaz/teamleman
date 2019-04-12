@@ -7,6 +7,13 @@ class Tournaments {
 
   public function getTournaments () {
     $this->db->connect();
+    $req = $this->db->pdo->prepare('SELECT * FROM T_Tournament ORDER BY tournament_date DESC');
+    $req->execute();
+    return $req->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function getOldTournaments () {
+    $this->db->connect();
     $req = $this->db->pdo->prepare('SELECT * FROM T_Tournament WHERE tournament_date < NOW() ORDER BY tournament_date DESC');
     $req->execute();
     return $req->fetchAll(PDO::FETCH_ASSOC);
@@ -37,7 +44,7 @@ class Tournaments {
 
   public function addTournament ($data) {
     $this->db->connect();
-    $req = $this->db->pdo->prepare('INSERT INTO T_Tournament (`tournament_name`, `tournament_location`, `tournament_date`, `tournament_final_ranking`, `tournament_fiba_link`)
+    $req = $this->db->pdo->prepare('INSERT INTO T_Tournament (tournament_name, tournament_location, tournament_date, tournament_final_ranking, tournament_fiba_link)
       VALUES (:name, :location, :date, :ranking, :link);');
     $req->bindParam(':name', $data['name'], PDO::PARAM_STR);
     $req->bindParam(':location', $data['location'], PDO::PARAM_STR);

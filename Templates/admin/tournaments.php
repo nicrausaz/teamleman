@@ -91,7 +91,7 @@ if ($_POST) {
         <div class="uk-margin">
           <label class="uk-form-label" for="form-horizontal-text">Lien FIBA</label>
           <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" name="link" type="text" placeholder="Lieu" value="<?php echo $tournament['tournament_fiba_link'] ?>">
+            <input class="uk-input" id="form-horizontal-text" name="link" type="text" placeholder="Lien" value="<?php echo $tournament['tournament_fiba_link'] ?>">
           </div>
         </div>
         <input type="text" name="id" value="<?php echo $tournament['tournament_id'] ?>" style="display:none;"/>

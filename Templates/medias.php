@@ -29,7 +29,6 @@
   </div>
   <div>
     <p class="uk-text-center"><small>Glissez pour afficher plus de photos !</small></p>
-
   </div>
   <br>
   <div class="uk-child-width-expand@s uk-text-center" uk-grid>
