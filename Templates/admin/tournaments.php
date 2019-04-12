@@ -100,13 +100,19 @@ if ($_POST) {
         </p>
       </form>
       <hr class="uk-divider-icon">
-      <div>
-        <?php foreach ($players->getAll() as $key => $player) { ?>
-          <input class="uk-checkbox" type="checkbox" name="tournamentplayers[]" id="<?= $player['player_firstname'] . $player['player_name']; ?>">
-          <label for="<?= $player['player_firstname'] . $player['player_name']; ?>"><?= $player['player_firstname'] . " " . $player['player_name']; ?></label>
-          <br>
-        <?php } ?>
-      </div>
+      <form class="uk-form-horizontal uk-margin-large" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <div class="uk-flex uk-flex-center">
+          <?php foreach ($players->getAll() as $key => $player) { ?>
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+              <input class="uk-checkbox" type="checkbox" name="tournamentplayers[]" id="<?= $player['player_firstname'] . $player['player_name']; ?>">
+              <label for="<?= $player['player_firstname'] . $player['player_name']; ?>"><?= $player['player_firstname']; ?></label>
+            </div>
+            <br>
+          <?php } ?>
+        </div>
+        <br>
+        <button type="submit" class="uk-button uk-button-primary uk-align-right">Modifier</button>
+      </form>
       <!-- <?php echo "<pre>"; ?>
       <?php $playerssss = $players->getAll(); print_r($playerssss); ?>
       <?php echo "</pre>"; ?> -->
