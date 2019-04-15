@@ -106,7 +106,7 @@ if ($_POST) {
       <hr class="uk-divider-icon">
       <form class="uk-form-horizontal uk-margin-large" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
       <input type="text" hidden readonly name="tournamentId" value="<?= $tournament['tournament_id'] ?>">
-        <div class="uk-flex uk-flex-center">
+        <div class="uk-flex">
           <?php foreach ($players->getAll() as $key => $player) { ?>
             <div class="uk-card uk-card-default uk-card-body uk-margin-left">
               <input type='hidden' value='false' name="tournamentplayers[<?= $player['player_id']?>]">

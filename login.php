@@ -14,7 +14,7 @@
 <body>
   <div class="uk-container uk-scope">
     <div class="uk-container uk-margin-large-top">
-      <div class="uk-card uk-card-default uk-card-body uk-width-1-3 uk-align-center">
+      <div class="uk-card uk-card-default uk-card-body uk-align-center">
         <h3>Connectez-vous</h3>
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <div class="uk-margin">

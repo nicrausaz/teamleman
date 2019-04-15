@@ -5,9 +5,9 @@
     <div class="uk-text-center">
       <?php
       if ($player['player_pic'] != "") { ?>
-        <img src="assets/imgs/players/<?= $player['player_pic'] ?>" alt="playerpic">
+        <img src="assets/imgs/players/<?= $player['player_pic'] ?>" alt="playerpic" class="uk-border-circle">
       <?php } else { ?>
-        <img src="assets/imgs/nopicture.jpg" alt="playerpic">
+        <img src="assets/imgs/nopicture.jpg" alt="playerpic" class="uk-border-circle">
       <?php } ?>
         <p><?= $player['player_firstname'] . " " . $player['player_name'] ?></p>
         <hr>
