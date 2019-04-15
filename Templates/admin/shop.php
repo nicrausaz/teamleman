@@ -7,7 +7,7 @@ if ($_POST) {
     $shopItems->addItem($_POST);
   }
   else {
-    echo "Erreur ou données manquantes";
+    // echo "Erreur ou données manquantes";
   }
  }
 ?>
