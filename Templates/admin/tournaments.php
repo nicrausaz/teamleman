@@ -1,4 +1,5 @@
 <?php
+
 if ($_POST) {
   if (isset($_POST['name']) && isset($_POST['location']) && isset($_POST['date'])) {
     if (isset($_POST['id'])) {
@@ -13,8 +14,11 @@ if ($_POST) {
   else if (isset($_POST['time']) && isset($_POST['team1']) && isset($_POST['team2'])) {
     $tournaments->editGameOfTournament($_POST);
   }
+  else if (isset($_POST['tournamentplayers'])) {
+    $tournaments->setTournamentPlayers($_POST);
+  }
   else {
-    echo "Erreur ou données manquantes";
+    // echo "Erreur ou données manquantes";
   }
  }
 ?>
@@ -101,10 +105,12 @@ if ($_POST) {
       </form>
       <hr class="uk-divider-icon">
       <form class="uk-form-horizontal uk-margin-large" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+      <input type="text" hidden readonly name="tournamentId" value="<?= $tournament['tournament_id'] ?>">
         <div class="uk-flex uk-flex-center">
           <?php foreach ($players->getAll() as $key => $player) { ?>
             <div class="uk-card uk-card-default uk-card-body uk-margin-left">
-              <input class="uk-checkbox" type="checkbox" name="tournamentplayers[]" id="<?= $player['player_firstname'] . $player['player_name']; ?>">
+              <input type='hidden' value='false' name="tournamentplayers[<?= $player['player_id']?>]">
+              <input class="uk-checkbox" type="checkbox" value="true" name="tournamentplayers[<?= $player['player_id']?>]" id="<?= $player['player_firstname'] . $player['player_name']; ?>" <?= $helpers->playerIsPlayingInTournament($tournaments, $tournament['tournament_id'], $player['player_id']) ? 'checked' : '' ?>>
               <label for="<?= $player['player_firstname'] . $player['player_name']; ?>"><?= $player['player_firstname']; ?></label>
             </div>
             <br>
@@ -113,9 +119,6 @@ if ($_POST) {
         <br>
         <button type="submit" class="uk-button uk-button-primary uk-align-right">Modifier</button>
       </form>
-      <!-- <?php echo "<pre>"; ?>
-      <?php $playerssss = $players->getAll(); print_r($playerssss); ?>
-      <?php echo "</pre>"; ?> -->
 
       <hr class="uk-divider-icon">
       <table class="uk-table">

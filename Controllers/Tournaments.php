@@ -93,4 +93,28 @@ class Tournaments {
     $req->bindParam(':id', $data['id'], PDO::PARAM_STR);
     $req->execute();
   }
+
+  public function setTournamentPlayers ($data) {
+    $tournament_id = $data['tournamentId'];
+    foreach ($data['tournamentplayers'] as $key => $value) {
+      $this->db->connect();
+      $req = $this->db->pdo->prepare('SELECT * FROM t_play_in WHERE fk_player=:fk_player AND fk_tournament=:fk_tournament');
+      $req->bindParam(':fk_player', $key, PDO::PARAM_STR);
+      $req->bindParam(':fk_tournament', $tournament_id, PDO::PARAM_STR);
+      $req->execute();
+      if (count($req->fetchAll(PDO::FETCH_ASSOC)) == 0 && $value == 'true') {
+        // insert
+        $req = $this->db->pdo->prepare('INSERT INTO t_play_in (fk_player,fk_tournament) VALUES(:fk_player,:fk_tournament)');
+        $req->bindParam(':fk_player', $key, PDO::PARAM_STR);
+        $req->bindParam(':fk_tournament', $tournament_id, PDO::PARAM_STR);
+        $req->execute();
+      } else if ($value == 'false') {
+        // check if has been removed
+        $req = $this->db->pdo->prepare('DELETE FROM t_play_in WHERE fk_player=:fk_player AND fk_tournament=:fk_tournament');
+        $req->bindParam(':fk_player', $key, PDO::PARAM_STR);
+        $req->bindParam(':fk_tournament', $tournament_id, PDO::PARAM_STR);
+        $req->execute();
+      }
+    }
+  }
 }
